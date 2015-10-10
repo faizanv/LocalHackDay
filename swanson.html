@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swanson</title>
+</head>
+<body>
+  <p style="text-align: center;">
+    <img src="pr_Ron.jpg" alt="Ron Swanson" width="75%">
+  </p>
+  <h1 id='quote' style="text-align: center;"></h1>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $.ajax({
+        url: 'http://ron-swanson-quotes.herokuapp.com/quotes',
+        type: 'get',
+        success: function(e) {
+          $('#quote').html('"' + e.quote + '"');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

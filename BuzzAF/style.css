@@ -1,0 +1,28 @@
+h1 {
+  text-align: center;
+  background-color: #ADAD85;
+  font-size: 50px;
+  text-decoration: underline;
+}
+
+body {
+  background-color: black;
+  color: #E6E600;
+}
+
+img {
+  margin: 50px;
+}
+
+h2 {
+  color: grey;
+}
+
+#subheading {
+  color: green;
+}
+
+.skills {
+  font-weight: bold;
+  color: purple;
+}
