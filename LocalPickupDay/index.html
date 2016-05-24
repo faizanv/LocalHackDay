@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Pickup</title>
+</head>
+<body>
+  <h1>Welcome To Local Pickup Day</h1>
+  <img src="http://vignette3.wikia.nocookie.net/hanna-barbera/images/2/24/Johnny_Bravo.jpg/revision/latest?cb=20120423033926" alt="Johnny Bravo" height="80%">
+  <h2 id="pickupLine"></h2>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+  <script>
+    $(document).ready(function() {
+      $.get("http://pebble-pickup.herokuapp.com/tweets/random", {}, function(result) {
+        console.log(result);
+        $("#pickupLine").html(result.tweet);
+      });
+    });
+  </script>
+</body>
+</html>
